@@ -30,7 +30,7 @@ url: https://oceanos.ntua.gr/
 logo: /assets/img/logo.png
 
 plugins:
-  - jekyll-default-layout
+  - jekyll-seo-tags
 
 # Build settings
 theme: null

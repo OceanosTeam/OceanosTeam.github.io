@@ -19,7 +19,6 @@ group :jekyll_plugins do
   # XXX: add versions
   gem "jekyll-feed"
   gem "jekyll-seo-tag"
-  gem "jekyll-default-layout", "~> 0.1.5"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

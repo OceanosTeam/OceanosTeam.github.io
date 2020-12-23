@@ -1,0 +1,332 @@
+---
+layout: default
+---
+
+<style>
+/* Make the image fully responsive */
+.carousel-inner img {
+width: 100%;
+height: 100%;
+}
+
+.bg-image {
+  /* The image used */
+  background-image: url("assets/img/seabg.jpg");
+    background-size: cover; /* or contain depending on what you want */
+  background-position: center center;
+  background-repeat: no-repeat;
+  
+
+  
+  /* Full height */
+  height: 100%; 
+}
+.bs-example{
+	margin: 20px;
+}
+/* Adds margin bottom to the images NOT IN panels */
+.image-grid img {
+   margin-bottom: 1rem;
+}
+.image-wrapper {
+  margin-top: 20px;
+  
+  display: grid;
+  grid-template-columns: repeat(3, minmax(min-content, 200px));
+  justify-content: center;
+  column-gap: 20px;
+  
+}
+
+.image-fig {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width:100%;
+  height:0;
+  transition: .5s ease;
+}
+.image-fig:hover .overlay {
+bottom:0;
+height:100%;
+}
+.sdg {
+  color: white;
+  font-size: 0.8vw;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.figcaption {
+  text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .image-wrapper {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    row-gap: 50px;
+    padding: 20px;
+  }
+}
+.hydro {
+ background-image:url("assets/img/hydroban.jpg")
+}
+.sebc {
+ background-image:url("assets/img/sebcban.jpg")
+}
+</style>
+
+<div class="container-fluid">
+	<!-- SELECTION TAB -->
+	<div class="bs-example pt-3">
+		<ul class="nav nav-tabs justify-content-center">
+			<li class="nav-item" style="width: 20%;text-align:center">
+				<a href="#wwa" class="nav-link active text-dark" data-toggle="tab">Who We Are</a>
+			</li>
+			<li class="nav-item" style="width: 20%;text-align:center">
+				<a href="#wwd" class="nav-link text-dark" data-toggle="tab">What We Do</a>
+			</li>
+			<li class="nav-item" style="width: 20%;text-align:center">
+				<a href="#ov" class="nav-link text-dark" data-toggle="tab">Our Vision</a>
+			</li>
+		</ul>
+		<!-- DONE -->
+
+		<div class="container pt-3 tab-content">
+
+			<!-- Who We Are-->
+			<div class="tab-pane fade show active" id="wwa" style="border:2px solid black;">
+				<h3 class="text-center">O C E A N O S</h3>
+				<p class="lead text-center">National and Technical University of Athens</p>
+				<p class="mx-3"><strong>Oceanos NTUA</strong> is a non-profit, research
+				team, consisted of undergraduate students of School of Naval
+				Architecture and Marine Engineering, representing National Technical
+				University of Athens in international competitions.</p>
+
+				<!-- Trying to center carousel-->
+				<div class="row">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+						<div id="demo" class="carousel slide" data-ride="carousel">
+							<!-- CAROUSEL-->
+							<ul class="carousel-indicators">
+								<li data-target="#demo" data-slide-to="0" class="active"></li>
+								<li data-target="#demo" data-slide-to="1"></li>
+								<li data-target="#demo" data-slide-to="2"></li>
+							</ul>
+
+							<!-- The slideshow -->
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="assets/img/ahoy.jpg" alt="" width="640" height="480">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/img/capsize.jpg" alt="" width="640" height="480">
+								</div>
+								<div class="carousel-item">
+									<img src="assets/img/dexameni.jpg" alt="" width="640" height="480">
+								</div>
+							</div>
+
+							<!-- Left and right controls -->
+							<a class="carousel-control-prev" href="#demo" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span>
+							</a>
+							<a class="carousel-control-next" href="#demo" data-slide="next">
+								<span class="carousel-control-next-icon"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- -->
+
+			</div>
+
+			<!--What We Do-->
+			<div class="tab-pane fade" id="wwd" style="border:2px solid black;">
+				<section class="hydro">
+
+					<div class="row">
+						<div class="col-md-4">
+							<h3 class="pt-4 text-light text-center">Hydrocontest</h3>
+							<h4 class="text-light text-center">Years 2016-17-18</h4>
+						</div>
+						<div class="col-md-4 pt-3">
+							<img style="max-width: 100%;max-height: 100%;display: block" class="img-responsive" src="assets/img/logo_old1.png" />
+						</div>
+						<div class="col-md-4">
+							<img style="max-width: 100%;max-height: 100%;display: block" class="img-responsive" src="assets/img/hydrocontest-logo.png" />
+						</div>
+					</div>
+
+					<div class="mx-3">
+						<ul>
+							<li><h5><kbd><i class="fas fa-weight-hanging"></i>200<small>kg</small></kbd> The Mass Transport Competition</h5></li>
+							<p>Each vessel must hold 200 kg of ballast to simulate the displacement of a cargo vessel</p>
+							<li><h5><kbd><i class="fas fa-weight-hanging"></i>20<small>kg</small></kbd> The Lightweight Competition</h5></li>
+							<p>The prototypes, loaded with 20 kg, represent leisure boats</p>
+							<li><h5><kbd><i class="fas fa-flag"></i></kbd> The Long-Distance Race</h5></li>
+							<p>The teams must cover the maximum distance within one hour</p>
+							<li><h5><i class="fas fa-car-battery"></i> Same Battery & Motor</h5></li>
+							<p>All the teams are provided with the same electric engine. The amount of the available energy is imposed to travel a set distance and the ranking is made according to the running time. The battery that is used is a 36 V with 7800 mAh.</p>
+							<li><h5><i class="fas fa-ruler"></i> Imposed Size</h5></li>
+							<p>Maximum dimensions: 2.50m x 2.50m x 2.00m</p>
+						</ul>
+					</div>
+				</section>
+				<section class="pt-3">
+					<div class="row">
+						<div class="col-md-4">
+							<h3 class="pt-4" style="text-align:center">Solar & Energy Boat Challenge</h3>
+							<h4 style="text-align:center">Years 2019-Present</h4>
+						</div>
+						<div class="col-md-4 pt-3">
+							<img style="max-width: 100%;max-height: 100%;display: block" class="img-responsive" src="assets/img/oceanosLOGO.png" />
+						</div>
+						<div class="col-md-4">
+							<img style="max-width: 100%;max-height: 100%;display: block" class="img-responsive pt-3" src="assets/img/sebc.png" />
+						</div>
+					</div>
+
+					<div class="mx-3 pt-3">
+						<ul>
+							<li><h5><i class="fas fa-leaf"></i> Energy Class</h5></li>
+							<p>Design the most powerful and enduring propulsion system as possible with a limited amount of energy. The types of energy that can be used are:  bio fuel, battery, hydrogen, compressed air, LNG, etc. – the choice is wide, but it must be a clean source.</p>
+							<li><h5><i class="fas fa-sun"></i> Solar Class</h5></li>
+							<p>Boats in the Solar Class will undertake match racing, slalom, and endurance races</p>
+							<li><h5><i class="fas fa-weight-hanging"></i><i class="fas fa-ruler"></i> Design</h5></li>
+							<p>Given a one-design catamaran hull, contestants need to build a cockpit for their boat according to these specifications: Length: 5m – Beam: 2.5m – Height: 0.45m – Displacement: 250kg – Speed: 15 knots.</p>
+							<li><h5><i class="fas fa-ship"></i> Energy - Offshore Class</h5></li>
+							<p>At an offshore race, boats must comply with YCM Offshore Class rules, which means being able to take three people and meet technical specifications defined in collaboration with the UIM.
+							The two harbours are set to be interconnected soon, but meanwhile this race will serve as an important test for boats, close to commercialization, with an eco-responsible propulsion on the sea.</p>
+
+						</ul>
+					</div>
+
+				</section>
+
+			</div>
+
+			<!--Our Vision-->
+			<div class="tab-pane fade bg-image" id="ov" style="border:2px solid black;">
+				<div class="mx-4 pt-3" style="text-align:center">
+					<h3>A Sustainable Future</h3>
+					<p>Our team's aim is the contribution to the UN Sustainable Develofpement Goals. We strive to minimize our carbon footprint and reduce the impact of human activities on our planet, working to preserve our oceans and forests. Our research revolves around 6 of these Goals.</p>
+				</div>
+				<div class="image-wrapper">
+
+					<figure class="image-fig image-1">
+						<a href="https://sdgs.un.org/goals/goal4" target=”_blank”><img class="logo" src="assets/img/sdg4.png" alt="4">
+							<div style="background-color:#c31f33" class="overlay"><div class="sdg"><p>Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all</p></div></div>
+						</a>
+					</figure>
+
+					<figure class="image-fig image-2">
+						<a href="https://sdgs.un.org/goals/goal7" target=”_blank”><img class="logo" src="assets/img/sdg7.png" alt="7">
+							<div style="background-color:#fdb713" class="overlay"><div class="sdg"><p>Ensure access to affordable, reliable, sustainable and modern energy for all </p> </div></div>
+						</a>
+					</figure>
+
+					<figure class="image-fig image-3">
+						<a href="https://sdgs.un.org/goals/goal9" target=”_blank”><img class="logo" src="assets/img/sdg9.png" alt="9">
+							<div style="background-color:#f36d25" class="overlay"><div class="sdg"><p>Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation </p> </div></div>
+						</a>
+					</figure>
+
+				</div>
+				<div class="image-wrapper">
+					<figure class="image-fig image-1">
+						<a href="https://sdgs.un.org/goals/goal13" target=”_blank”><img class="logo" src="assets/img/sdg13.png" alt="13">
+							<div style="background-color:#48773e" class="overlay"><div class="sdg"><p>Take urgent action to combat climate change and its impacts*</p> </div></div>
+						</a>
+					</figure>
+
+					<figure class="image-fig image-2">
+						<a href="https://sdgs.un.org/goals/goal14" target=”_blank”><img class="logo" src="assets/img/sdg14.png" alt="14">
+							<div style="background-color:#007dbc" class="overlay"><div class="sdg"><p>Conserve and sustainably use the oceans, seas and marine resources for sustainable development </p> </div></div>
+						</a>
+					</figure>
+
+					<figure class="image-fig image-3">
+						<a href="https://sdgs.un.org/goals/goal17" target=”_blank”><img class="logo" src="assets/img/sdg17.png" alt="17">
+							<div style="background-color:#183668" class="overlay"><div class="sdg"><p>Strengthen the means of implementation and revitalize the global partnership for sustainable development </p> </div></div>
+						</a>
+					</figure>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- BEAUTIFUL SUPPORTERS-->
+<div class=" mx-4 pt-3 container-fluid">
+	<h2 class="lead" style="text-align:center"><strong>Proudly Supported By:</strong></h2>
+	<div class="row">
+
+		<div class="col-md-3 pt-3">
+			<div class="card shadow-lg bg-dark text-light" style="width:250px">
+				<img class="card-img-top" src="assets/img/grigoropoulos.jpg" alt="Card image" style="width:100%" />
+				<div class="card-body">
+					<h5 class="card-title">Dean Prof. Gregory Grigoropoulos</h5>
+					<p class="card-text"> General Project Coordinator</p>
+					<a href="http://users.ntua.gr/gregory/" class="btn btn-primary">More</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 pt-3" >
+			<div class="card shadow-lg bg-dark text-light" style="width:250px">
+				<img class="card-img-top" src="assets/img/papalambrou.jpg" alt="Card image" style="width:100%" />
+				<div class="card-body">
+					<h5 class="card-title">Assistant Prof. George Papalambrou</h5>
+					<p class="card-text">Supervisor</p>
+					<a href="http://www.lme.ntua.gr/people-1/papalambrou" class="btn btn-primary">More</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 pt-3">
+			<div class="card shadow-lg bg-dark text-light" style="width:250px">
+				<img class="card-img-top" src="assets/img/ntua.jpg" alt="Card image" style="width:100%" />
+				<div class="card-body">
+					<h5 class="card-title">National Technical University of Athens</h5>
+					<p class="card-text">Institution</p>
+					<a href="https://www.ntua.gr/en/" class="btn btn-primary">More</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-3 pt-3" >
+			<div class="card shadow-lg bg-dark text-light" style="width:250px">
+				<img class="card-img-top" src="assets/img/lme.jpg" alt="Card image" style="width:100%" />
+				<div class="card-body">
+					<h5 class="card-title">Laboratory of Marine Engineering</h5>
+					<p class="card-text">Research</p>
+					<a href="http://www.lme.ntua.gr/" class="btn btn-primary">More</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

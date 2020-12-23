@@ -1,11 +1,95 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+safe: true
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
 title: Oceanos NTUA
-logo: /assets/img/logo.png
+description: >
+  Oceanos NTUA is a non-profit, research team, consisted of undergraduate
+  students of School of Naval Architecture and Marine Engineering, representing
+  National Technical University of Athens in international competitions
 author:
   email: oceanos.ntua@gmail.com
+  facebook: oceanos.ntua
+  instagram: oceanos_ntua
+  youtube_channel: UCyVxOwCrgLrMhWwGyk2rNLg
 
-theme: jekyll-theme-bootstrap
-minima:
-  social_links:
-    facebook: oceanos.ntua
-    instagram: oceanos_ntua
-    youtube_channel: UCyVxOwCrgLrMhWwGyk2rNLg
+url: https://oceanos.ntua.gr/
+logo: /assets/img/logo.png
+
+plugins:
+  - jekyll-default-layout
+
+# Build settings
+theme: null
+
+exclude:
+  # default excludes
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  # - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+  # my excludes
+  - package.json
+  - package-lock.json
+
+include:
+  # - node_modules
+  - node_modules/jquery/dist/jquery.slim.min.js
+  - node_modules/jquery/dist/jquery.slim.min.map
+  - node_modules/bootstrap/dist/js/bootstrap.min.js
+  - node_modules/bootstrap/dist/js/bootstrap.min.js.map
+
+  # - node_modules/bootstrap-icons/icons
+  # - node_modules/bootstrap-icons/icons/
+  # - node_modules/bootstrap-icons/icons/*
+  - node_modules/bootstrap-icons/icons/facebook.svg
+  - node_modules/bootstrap-icons/icons/instagram.svg
+  - node_modules/bootstrap-icons/icons/youtube.svg
+  - node_modules/bootstrap-icons/icons/envelope-fill.svg
+
+  # XXX: these don't work :(
+  # - node_modules/@fortawesome/fontawesome-free/webfonts
+  # - node_modules/@fortawesome/fontawesome-free/webfonts/
+  # - node_modules/@fortawesome/fontawesome-free/webfonts/*
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.eot
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.svg
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.ttf
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-brands-400.woff2
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.eot
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.svg
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.ttf
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-regular-400.woff2
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.eot
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.svg
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.ttf
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff
+  - node_modules/@fortawesome/fontawesome-free/webfonts/fa-solid-900.woff2
+
+markdown: kramdown
+
+sass:
+  style: compressed
+  load_paths:
+    - node_modules

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="d-flex flex-column flex-md-row">
+
+	<!-- <nav class="sticky-md-top order-md-2 align-self-start"> -->
+	<!-- 	<ol class="nav nav-pills flex-column"> -->
+	<!-- 		<li class="nav-item"><a class="nav-link" href="#team">THE TEAM</a></li> -->
+	<!-- 		<li class="nav-item"><a class="nav-link" href="#competition">COMPETITION</a></li> -->
+	<!-- 		<li class="nav-item"><a class="nav-link" href="#research">RESEARCH</a></li> -->
+	<!-- 		<li class="nav-item"><a class="nav-link" href="#timeline">TIMELINE</a></li> -->
+	<!-- 		<!-1- <li class="nav-item"><a class="nav-link" href="#result">RESULT</a></li> -1-> -->
+	<!-- 		<li class="nav-item"><a class="nav-link" href="#work">OUR WORK</a></li> -->
+	<!-- 		<li class="nav-item"><a class="nav-link" href="#sponsors">SPONSORS</a></li> -->
+	<!-- 	</ol> -->
+	<!-- </nav> -->
+
+	{{ content }}
+
+</div>
+
+<!-- https://css-tricks.com/sticky-table-of-contents-with-scrolling-active-states -->
+<script type="text/javascript">
+	const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			const id = entry.target.getAttribute("id");
+			const element = document.querySelector(`nav a[href="#${id}"`);
+			if (entry.intersectionRatio > 0) {
+				element.classList.add("active");
+			} else {
+				element.classList.remove("active");
+			}
+		});
+	});
+
+	window.addEventListener("DOMContentLoaded", () => {
+		// Track all sections that have an `id` applied
+		document.querySelectorAll("main section[id]")
+			.forEach(section => observer.observe(section));
+	});
+</script>

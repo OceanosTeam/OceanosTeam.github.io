@@ -1,0 +1,33 @@
+---
+# This will be included by Jekyll
+---
+
+@import "bootstrap/scss/bootstrap";
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+
+    .sticky#{$infix}-top {
+      position: sticky;
+      top: 0;
+    }
+    // sticky: top !important; }
+  }
+}
+
+{% raw %}
+$fa-font-path: "/node_modules/@fortawesome/fontawesome-free/webfonts/";
+{% endraw %}
+@import "@fortawesome/fontawesome-free/scss/fontawesome";
+@import "@fortawesome/fontawesome-free/scss/regular";
+@import "@fortawesome/fontawesome-free/scss/solid";
+@import "@fortawesome/fontawesome-free/scss/brands";
+
+.masthead {
+    height: 100%;
+    background-image: url("/assets/img/banner.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"> -->
+	<!-- <link rel="icon" href="photos/icons/32.png" sizes="32x32"> -->
+	<!-- <link rel="icon" href="photos/icons/192.png" sizes="192x192"> -->
+	<!-- <link rel="apple-touch-icon" href="photos/icons/180.png"> -->
+	<!-- <meta name="msapplication-TileImage" content="photos/icons/270.png"> -->
+
+	{% seo %}
+	{% feed_meta %}
+
+	<link rel="stylesheet" href="{{ "assets/main.css" | relative_url }}">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+	{%- include header.html -%}
+
+<!-- 	<main class="container"> -->
+		{{ content }}
+<!-- 	</main> -->
+
+	{%- include footer.html -%}
+
+	<!-- <script src="{{ "node_modules/jquery/dist/jquery.min.js" | relative_url }}" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"></script> -->
+	<script src="{{ "node_modules/jquery/dist/jquery.slim.min.js" | relative_url }}" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"></script>
+	<!-- <script src="{{ "node_modules/@popperjs/core/dist/umd/popper.min.js" | relative_url }}" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"></script> -->
+	<script src="{{ "node_modules/bootstrap/dist/js/bootstrap.min.js" | relative_url }}" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"></script>
+
+</body>
+</html>
